@@ -1,0 +1,26 @@
+	<div class="col-md-12 sectionhead">
+	<p class="lead">Your Total Savings</p>
+	</div>
+	<p>&nbsp;</p>
+	<div class="col-md-6 text-center"><h1>{{ts | currency}}</h1></div>
+	<div class="col-md-6 text-center"><h1>{{savingsPercent = ( ts / totals.ttl) * 100 | number:0}}%</h1></div>
+	<div class="col-md-12">
+	<form class="pure-form" ng-submit="updateResult()" novalidate>
+    <input type="email" placeholder="Enter your work email address" class="pure-input-1-3" ng-model="resultsData.emailAddress" required>
+    <button type="submit" class="btn  btn-info">Get the report</button>
+</form>
+</div>
+<p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
+	<p>Total Air Travel: {{totals.t1 | currency}} per year</p>
+	<p>Total Land Travel: {{totals.t2 | currency}} per year</p>
+	<p>Total Travel: {{totals.ttl | currency}} per year</p>
+
+	<p>Savings from Buyers Scheme rebate: {{savings.s1 | currency}} per year</p>
+	<p>Savings from Reduction in Car Excess: {{savings.s2 | currency}} per year</p>
+	<p>Smart stay program: {{savings.s3 | currency}} per year</p>
+	<p>Total hard dollar savings: {{ts = savings.s1 + savings.s2 + savings.s3 | currency}} per year</p>
+	<p>Net spend: {{tas = totals.ttl - ts | currency}} per year</p>
+	<p>booking fee: {{tbf = tas * 0.03 | currency}}</p>
+	<p>Net after saving: {{tas + tbf | currency}}</p>
+
+

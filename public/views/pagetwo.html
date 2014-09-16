@@ -1,0 +1,80 @@
+
+<div class="container">
+<form id="pageTwoForm" class="pure-form" name="pageTwo" ng-submit="submitForm2(pageTwo.$valid)" novalidate>
+   <fieldset>
+   <div class="col-md-12 sectionhead">
+   <p class="lead">International Travel</p>
+</div>
+<p>&nbsp;</p>
+      <div class="pure-control-group">
+         <div class="col-md-8">
+            <label for="name">Enter the number of SHORT haul international flights you book per month (e.g. Asia, NZ)</label>
+         </div>
+         <div class="col-md-1">
+            <input id="name" type="number" placeholder="" ng-model="formData.InternationalFlightsShortHaul" ng-blur="increasePercent(2)" required>
+         </div>
+      </div>
+      <div class="pure-control-group">
+         <div class="col-md-8">
+            <label for="password">Enter the number of LONG haul international flights you book per month (e.g. US, Europe)</label>
+         </div>
+         <div class="col-md-4">
+            <input id="password" type="number" placeholder="" ng-model="formData.InternationalFlightsLongHaul" ng-blur="increasePercent(2)" required>
+         </div>
+         <div class="pure-control-group">
+            <div class="col-md-8">
+               <label for="email">On average, how many nights accomodation would you book per international trip?</label>
+            </div>
+            <div class="col-md-1">
+               <input id="email" type="number" placeholder="" ng-model="formData.InternationalFlightsAccomodation" ng-blur="increasePercent(2)" required>
+            </div>
+         </div>
+         <div class="pure-control-group">
+            <div class="col-md-8">
+               <label for="foo">What percentage of international flights are Premium Economy?</label>
+            </div>
+            <div class="col-md-4">
+               <input id="foo" type="number" placeholder="" ng-model="formData.InternationalFlightsPremiumEconomy" ng-blur="increasePercent(2)" required><label>%</label>
+            </div>
+         </div>
+         <div class="pure-control-group">
+            <div class="col-md-8">
+               <label for="foo">What percentage of international flights are Business Class?</label>
+            </div>
+            <div class="col-md-4">
+               <input  id="foo" type="number" placeholder="" ng-model="formData.InternationalFlightsBusinessClass" ng-blur="increasePercent(2)" required><label>%</label>
+            </div>
+         </div>
+         <div class="col-md-12 sectionhead">
+<p class="lead">Other Considerations</p>
+</div>
+<p>&nbsp;</p>
+<div class="pure-control-group">
+<label>Are you a member of either of the following buyer schemes?</label><br/>
+<div class="col-md-6 col-md-offset-3">
+<label for="option-one" class="pure-checkbox">
+<input id="option-one" type="checkbox" value="" ng-model="formData.BuyerSchemesQantasAmex">
+Qantas/Amex Co-branded
+</label>
+
+<label for="option-two" class="pure-checkbox">
+<input id="option-two" type="checkbox" value="" ng-model="formData.BuyerSchemesVirgin">
+Virgin Accelerate
+</label>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="form-group row">
+<div class="col-xs-6 col-xs-offset-3">
+<p>&nbsp;</p>
+<input type="submit"  class="btn btn-block btn-info" value="Next Section">
+</div>
+<div class="col-md-12 text-center">
+<p class="error" ng-show="formInvalid">Please fill in all fields</p>
+</div>
+</div>
+   </fieldset>
+</form>
+<p>{{percent}}% Complete</p>
+
+</div>

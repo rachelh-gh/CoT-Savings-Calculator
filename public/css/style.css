@@ -1,0 +1,8 @@
+span.deleteBtn{
+	cursor:pointer;
+	color:#8D00FF;
+	font-weight:bold;
+	font-size:14px;
+}
+.pure-control-group{text-align:left;}
+.sectionhead{text-align:left; border-bottom:1px solid #cccccc;}

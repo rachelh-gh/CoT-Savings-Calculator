@@ -1,0 +1,22 @@
+<div class="col-md-12 sectionhead">
+	<p class="lead">View All</p>
+	</div>
+	<p>&nbsp;</p>
+
+<button type="button" class="btn  btn-info" ng-csv="getCSV" csv-header="['ID', 'Date']"  filename="cot-results.csv">Download All</button>	
+
+<div ng-repeat="myresult in resultsapi">
+<p> Created On: {{myresult.date | date:'medium'}}</p>
+<p>Email: {{myresult.emailAddress}}</p>
+<div ng-repeat="data in myresult.calculatorData">
+<div class="col-sm-4">
+<p>Result {{$index + 1}}</p>
+<ul ng-repeat="(k,v) in data">
+<li style="width:30%; display:inline;">{{k}}: {{v}}</li>
+</ul>
+</div>
+</div>
+<div class="clearfix"></div>
+<span class="deleteBtn" ng-click="deleteResult(myresult._id)">delete&nbsp;<i class="fa fa-bomb fa-lg"></i></span>
+</div>
+

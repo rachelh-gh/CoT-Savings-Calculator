@@ -1,0 +1,73 @@
+	
+
+
+<div class="col-md-12 sectionhead">
+	<p class="lead">Domestic Travel</p>
+	</div>
+	<p>&nbsp;</p>
+<div class="container">
+<form id="pageOneForm" class="pure-form" name="pageOne" ng-submit="submitForm1(pageOne.$valid)" novalidate>
+    <fieldset>
+        <div class="pure-control-group">
+        <div class="col-md-8">
+            <label for="w1">Enter the number of domestic flights you book per month</label>
+          </div>  
+          <div class="col-md-1">
+            <input class="formInput" id="w1" name="w1" type="number" placeholder="" ng-minlength="1" ng-model="formData.domesticFlightsPerMonth"  ng-blur="increasePercent(1)" required>
+           </div> 
+        </div>
+
+        <div class="pure-control-group">
+        <div class="col-md-8">
+            <label for="w2">What percentage of these require accomodation?</label>
+             </div>  
+          <div class="col-md-4">
+            <input class="formInput" id="w2" type="number" placeholder="" ng-minlength="1" ng-model="formData.domesticFlightsAccomodationPercent" ng-blur="increasePercent(1)" required><label>%</label>
+        </div>
+
+        <div class="pure-control-group">
+        <div class="col-md-8">
+            <label for="w3">On average, how many nights accomodation would you book per trip?</label>
+             </div>  
+          <div class="col-md-1">
+            
+            <input class="formInput" id="w3" type="number" placeholder="" ng-minlength="1" ng-model="formData.domesticFlightsAccomodationAvNights" ng-blur="increasePercent(1)"  required>
+            </div> 
+        </div>
+
+        <div class="pure-control-group">
+        <div class="col-md-8">
+            <label for="w4">What percentage of these trips require car hire?</label>
+             </div>  
+          <div class="col-md-4">
+            <input class="formInput" id="w4" type="number" placeholder="" ng-minlength="1" ng-model="formData.domesticFlightsCarHirePercent"  ng-blur="increasePercent(1)" required><label>%</label>
+            </div> 
+        </div>
+
+        <div class="pure-control-group">
+        <div class="col-md-8">
+            <label for="w5">On average, how many days do you book the hire car for each trip?</label>
+             </div>  
+          <div class="col-md-1">
+            <input class="formInput" id="w5" type="number" name="w5" ng-minlength="1" placeholder="" ng-model="formData.domesticFlightsCarHireAvDays" ng-change="increasePercent(1)" required>
+           </div> 
+        </div>
+
+        <div class="form-group row">
+
+<div class="col-xs-6 col-xs-offset-3">
+<p>&nbsp;</p>
+    <input type="submit"  class="btn btn-block btn-info" value="Next Section">
+    
+</div>
+ <div class="col-md-12 text-center">
+        <p class="error" ng-show="formInvalid">Please fill in all fields</p>
+        </div>
+</div>
+    </fieldset>
+</form>
+<p>{{percent | limitTo : 100}}% Complete</p>
+
+
+	
+</div>
